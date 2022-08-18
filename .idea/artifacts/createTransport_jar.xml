@@ -1,0 +1,8 @@
+﻿<component name="ArtifactManager">
+  <artifact type="jar" name="createTransport:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="archive" name="createTransport.jar">
+      <element id="module-output" name="newHardSkills" />
+    </root>
+  </artifact>
+</component>
