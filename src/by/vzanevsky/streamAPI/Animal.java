@@ -1,5 +1,6 @@
 package by.vzanevsky.streamAPI;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Animal {
@@ -9,6 +10,8 @@ public class Animal {
     private Integer weight;
     private Integer feed;
     private Date receiptDate;
+
+    SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
     public Animal (String name, String species, Integer weight, Integer feed, Date receiptDate) {
         this.name = name;
@@ -39,10 +42,11 @@ public class Animal {
     }
 
     public void info() {
-        System.out.print("Название: " + name + '\n' +
-                              "Вид: " + species + '\n' +
-                              "Вес: " + weight + '\n' +
-                "Дата поступления: " + receiptDate + '\n');
+        System.out.print("\nНазвание: " + name + '\n' +
+                                "Вид: " + species + '\n' +
+                                "Вес: " + weight + '\n' +
+                       "Корма в день: " + feed + " кг" + '\n' +
+                   "Дата поступления: " + format.format(receiptDate) + '\n');
     }
 
-}
+   }
